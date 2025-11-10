@@ -1,64 +1,64 @@
-# 🚗 Fábrica de Automóveis
+# Fábrica de Automóveis 2025
 
-O projeto **Fábrica de Automóveis** consiste em um sistema completo que permite visualizar áreas de estacionamento, gerenciar carros disponíveis e vendidos, e realizar o controle de vendas de forma prática e intuitiva.
+Projeto full stack inspirado na avaliação SAEP 2023, com o objetivo de simular o sistema de uma fábrica de automóveis. O sistema possibilita o **cadastro, consulta, atualização e exclusão** de informações relacionadas a **veículos, clientes, concessionárias e vendas**.
 
----
+## Ambiente de Desenvolvimento
 
-## 🧩 Tecnologias Utilizadas
+* **Back-end:** Node.js + Express
+* **Banco de Dados:** MySQL (via XAMPP)
+* **IDE:** Visual Studio Code
+* **Front-end:** HTML, CSS e JavaScript
 
-Este projeto foi desenvolvido utilizando tecnologias modernas e de fácil integração, garantindo bom desempenho e manutenção simplificada.
+## Passos para Configuração
 
-### 🖥️ Frontend
-- **HTML5** — utilizado para estruturar o conteúdo e os elementos principais da aplicação.  
-- **CSS3** — responsável pela estilização da interface e criação de um layout responsivo e atraente.  
-- **JavaScript (ES6+)** — linguagem usada para implementar a lógica de interação entre usuário e sistema.  
-- **Fetch API** — permite a comunicação entre o frontend e o backend por meio de requisições HTTP assíncronas.
+1. **Clone** este repositório para o seu computador.
+2. Acesse a pasta **API** e execute o comando:
 
-### ⚙️ Backend
-- **API REST local** — responsável por processar as requisições e gerenciar os dados de veículos, clientes e concessionárias.  
-- **MySQL** — banco de dados relacional utilizado para armazenar todas as informações do sistema.  
-- **Prisma ORM** — ferramenta de mapeamento objeto-relacional que facilita a manipulação de dados e a integração entre o banco e a aplicação.
+   ```bash
+   npm install
+   ```
 
----
+   para instalar as dependências do projeto.
+3. **Inicie** o XAMPP e ative os serviços **Apache** e **MySQL**.
+4. **Crie** o arquivo `.env` dentro da pasta `/api` com as seguintes informações:
 
-## 🧠 Como Executar o Projeto
+   ```js
+   DATABASE_URL="mysql://root@localhost:3306/fabrica2025"
+   ```
+5. **Execute** a migração do banco de dados:
 
-Abaixo estão descritos os passos necessários para executar o sistema em ambiente local.
+   ```bash
+   npx prisma migrate dev --name init
+   ```
+6. **Importe** os dados iniciais abrindo o phpMyAdmin (ou via terminal `mysql -u root`) e rodando o script:
 
-### ✅ Pré-requisitos
-Antes de iniciar, certifique-se de possuir:
-- Um **servidor de API local** configurado na **porta 3000**;  
-- Um **navegador web moderno** (como Google Chrome, Edge ou Firefox);  
-- (Opcional) **Python** ou **Node.js** instalados, caso queira rodar o servidor local para o frontend.
+   ```bash
+   ./docs/importacao.sql
+   ```
+7. **Inicie** o servidor da API com:
 
----
+   ```bash
+   node server.js
+   ```
 
-### 🚀 Instruções de Execução
+   ou, para modo de desenvolvimento:
 
-1. **Iniciar o servidor da API**
-  ```npm start ``` ou ```node server.js```
+   ```bash
+   npm run dev
+   ```
+8. **Abra** a pasta `web` no VS Code e utilize a extensão **Live Server** para executar o front-end.
 
-1. **Executar o Frontend:**
+## DER (Diagrama Entidade-Relacionamento)
 
-Método 1: Abrir index.html diretamente no navegador
+![DER Fábrica de Automóveis 2025](./docs/der.png)
 
-Método 2: Usar servidor local - ```python -m http.server 8000```
-ou
-```npx http-server```
+## Capturas de Tela
 
-e 
+### Página Inicial
 
-Abrir: ```http://localhost:8000```
+![Página Inicial](./docs/screenshot01.png)
 
-## ⚙️ Funcionalidades
+> O desenvolvimento das demais funcionalidades deverá ser continuado conforme as instruções da **Aula de Projeto de Software**.
 
-- Visualização de **11 áreas de estacionamento** organizadas por status.  
-- **Áreas azuis:** representam os carros alocados para venda.  
-- **Áreas brancas:** indicam áreas livres (sem veículos cadastrados).  
-- **Modal interativo:** exibe a lista completa de carros disponíveis em cada área.  
-- **Sistema de vendas:** permite a seleção do cliente e o registro da entrega do veículo.  
-- **Identificação visual:** carros vendidos são destacados com o status **"Vendido"**.  
-- **Interface responsiva:** modais sobrepostos e design adaptável para diferentes tamanhos de tela.
-
-### Desenvolvido por: LohaineMattos
-
+**Autor:** Gabriel Barbosa Zanon
+**GitHub:** [GabrielBZanon](https://github.com/GabrielBZanon)
