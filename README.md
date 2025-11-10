@@ -50,15 +50,14 @@ Projeto full stack inspirado na avaliação SAEP 2023, com o objetivo de simular
 
 ## DER (Diagrama Entidade-Relacionamento)
 
-![DER Fábrica de Automóveis 2025](./docs/der.png)
+<img width="777" height="413" alt="der_fabrica" src="https://github.com/user-attachments/assets/6baf213a-9d18-4c97-83de-aaba81860dc6" />
 
 ## Capturas de Tela
 
 ### Página Inicial
 
-![Página Inicial](./docs/screenshot01.png)
+<img width="673" height="888" alt="print" src="https://github.com/user-attachments/assets/bf53b2be-c7d5-4858-9d96-912bbfedcb17" />
 
 > O desenvolvimento das demais funcionalidades deverá ser continuado conforme as instruções da **Aula de Projeto de Software**.
 
-**Autor:** Gabriel Barbosa Zanon
-**GitHub:** [GabrielBZanon](https://github.com/GabrielBZanon)
+**Feito por:** Lohaine Mattos
